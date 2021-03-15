@@ -23,13 +23,14 @@ function generatePassword() {
     );
     return;
   }
-
+  //need to define variables to be used in the password
   var groupOfValids = [];
   var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz".split("");
   var numberChar = "0123456789".split("");
   var specialChar = "*&^%$#@!?><{}".split("");
 
+  //The following functions and loops define the criteria for our password
   var confirmLowerCase = confirm(
     "Would you like your password to include lowercase letters?"
   );
@@ -64,7 +65,7 @@ function generatePassword() {
       groupOfValids.push(numberChar[i]);
     }
   }
-
+  //The following function generates the password with the selected criteria above
   var randomPassword = "";
   for (var i = 0; i < lengthConfirmation; i++) {
     groupOfValids[Math.floor(Math.random() * groupOfValids.length)];
